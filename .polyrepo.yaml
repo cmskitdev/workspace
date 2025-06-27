@@ -11,6 +11,10 @@ workspaces:
         url: git@github.com:cmskitdev/common.git
         branch: main
         path: packages/common
+      - name: notion
+        url: git@github.com:cmskitdev/notion.git
+        branch: main
+        path: packages/clients/notion
       - name: cli
         url: git@github.com:cmskitdev/cli.git
         branch: main
