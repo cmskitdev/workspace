@@ -1,0 +1,29 @@
+default: dev
+workspaces:
+  - name: dev
+    path: ~/workspace/polyrepo
+    repositories:
+      - name: common
+        url: git@github.com:cmskit/common.git
+        branch: main
+        path: packages/common
+      - name: cli
+        url: git@github.com:cmskit/cli.git
+        branch: main
+        path: packages/cli
+        runners:
+          - cwd: packages/cli
+            watch: true
+            matchers:
+              - include: "**/*.ts"
+            commands:
+              - name: "dev"
+                command:
+                  - "npm"
+                  - "run"
+                  - "dev"
+              - name: "build"
+                command:
+                  - "npm"
+                  - "run"
+                  - "build"
