@@ -1,14 +1,18 @@
 default: dev
 workspaces:
   - name: dev
-    path: ~/workspace/polyrepo
+    path: ~/workspace/cmskit
     repositories:
+      - name: workspace
+        url: git@github.com:cmskitdev/workspace.git
+        branch: main
+        path: workspace
       - name: common
-        url: git@github.com:cmskit/common.git
+        url: git@github.com:cmskitdev/common.git
         branch: main
         path: packages/common
       - name: cli
-        url: git@github.com:cmskit/cli.git
+        url: git@github.com:cmskitdev/cli.git
         branch: main
         path: packages/cli
         runners:
