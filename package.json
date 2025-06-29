@@ -22,6 +22,8 @@
     "docs/*",
     "apps/*",
     "packages/*",
-    "packages/clients/*"
+    "packages/clients/*",
+    "packages/ui-components",
+    "packages/ui-components/packages/*"
   ]
 }
